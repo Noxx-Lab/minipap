@@ -17,9 +17,3 @@ if(!$escolhaDB){
     echo "ERROR!!! Falha na ligação à base de dados!";
     exit; 
 }
-// Função para adicionar índice, se ainda não existir
-function criar_indices($db) {
-    $db->query("CREATE INDEX IF NOT EXISTS idx_ano ON tbl_ano_turma(ano)");
-    $db->query("CREATE INDEX IF NOT EXISTS idx_turma ON tbl_ano_turma(turma)");
-    $db->query("CREATE INDEX IF NOT EXISTS idx_nome_aluno ON tbl_alunos(nome_aluno)");
-}

@@ -4,34 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADICIONAR ALUNO</title>
+    <link rel="stylesheet" href="form_style.css">
 </head>
 <body>
-    <a href="tabela.php"><button>Voltar</button></a>
-    <h2 style="text-align: center;">Adicionar Novo Aluno</h2>
-    <form method="POST" action="adicionar.php" style="max-width: 600px; margin: auto;">
-        <fieldset>
-            <legend>Inserir Dados do Aluno</legend>
-            <label for="idano">Ano:</label> 
-            <input type="number" name="ano" id="idano" required min="1" max="12"><br><br>
+    <a href="tabela.php" class="voltar-btn">Voltar</a>
+    <div class="form-container">
+        <h2>ADICIONAR ALUNO</h2>
+        <form method="POST" action="adicionar.php">
+            <label for="ano">Ano</label>
+            <input type="number" id="ano" name="ano" placeholder="Ano" required min="1" max="12">
 
-            <label for="idturma">Turma:</label> 
-            <input type="text" name="turma" id="idturma" required maxlength="1" style="text-transform: uppercase;"><br><br>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome" required>
 
-            <label for="idnome">Nome:</label> 
-            <input type="text" name="nome" id="idnome" required><br><br>
+            <label for="turma">Turma</label>
+            <input type="text" id="turma" name="turma" placeholder="Turma" required maxlength="1" style="text-transform: uppercase;">
 
-            <label for="iduser">User:</label> 
-            <input type="text" name="user" id="iduser" maxlength="10" required><br><br>
+            <label for="user">User</label>
+            <input type="text" id="user" name="user" placeholder="User" maxlength="10" required>
 
-            <label for="idemail">Email:</label> 
-            <input type="email" name="email" id="idemail" required><br><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
 
-            <label for="idpw">Password:</label> 
-            <input type="text" name="pw" id="idpw" required><br><br>
+            <label for="password">Password</label>
+            <input type="text" id="pw" name="pw" placeholder="Password" required>
 
-        </fieldset>
-        <br>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Limpar">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+
+            </div>
+        </form>
+    </div>
     </body>
     </html>

@@ -17,6 +17,7 @@
     echo "<p><strong>Nome:</strong> $nome</p>";
     echo "<p><strong>User:</strong> $user</p>";
     echo "<p><strong>Email:</strong> $email</p>";
+    echo "<p><strong>Password:</strong> $pw</p>";
 
     // Formulário de confirmação com dados ocultos para reenviar quando o utilizador confirmar
     echo '<form method="post">';

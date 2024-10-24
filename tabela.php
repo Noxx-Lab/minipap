@@ -4,46 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela de Dados</title>
-    <style>
-        /* Estilos para a tabela */
-        table {
-            width: 60%;
-            margin: 20px auto; /* Centraliza a tabela na página */
-            border-collapse: collapse;
-            border: 2px solid #D8BFD8; /* Borda roxo claro */
-        }
-
-        th, td {
-            border: 2px solid #D8BFD8;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #D8BFD8; /* Fundo roxo claro */
-        }
-        div{
-            text-align: center; /* para centralizar a div que tem o número de páginas */
-        }
-        button {
-        width: 80px; /* Aumenta a largura dos botões */
-        height: 35px; /* Aumenta a altura dos botões */
-        color: white;
-        border: none;
-        cursor: pointer;
-    }   
-    </style>
+    <link rel="stylesheet" href="tabela_style.css">
 </head>
 <body>
-        <form action="adicionar.html" method="post" style="display:inline;">
-            <button type="submit" name="adicionar" style="background-color: green; color: white;">Adicionar</button>
-        </form>
-        <form action="" method="post" style="display:inline;">
-            <button type="submit" name="editar" style="background-color: blue; color: white;">Editar</button>
-        </form>
-        <form action="" method="post" style="display:inline;">
-            <button type="submit" name="eliminar" style="background-color: red; color: white;">Eliminar</button>
-        </form>
+<form action="adicionar.html" method="post" style="display:inline;">
+        <button type="submit" name="adicionar" style="background-color: green; color: white;">Adicionar</button>
+    </form>
+    <form action="editar.php" method="post" style="display:inline;">
+        <input type="hidden" name="id_aluno" id="id_aluno_editar">
+        <button type="submit" id="btn-editar" style="background-color: blue; color: white;" disabled>Editar</button>
+    </form>
+    <form action="eliminar.php" method="post" style="display:inline;">
+        <input type="hidden" name="id_aluno" id="id_aluno_eliminar">
+        <button type="submit" id="btn-eliminar" style="background-color: red; color: white;" disabled>Eliminar</button>
+    </form>
+
     <h2 style="text-align:center;">Tabela de Dados da Base de Dados</h2>
 
     <table>
@@ -89,7 +64,13 @@
                 echo "<td>" . $registos["user_aluno"] . "</td>";
                 echo "<td>" . $registos["email_aluno"] . "</td>";
                 echo "<td>" . $registos["aluno_pw"] . "</td>";
-                echo "<td style='text-align: center;'><input type='radio' name='selecionar' value=''".$registos['id_aluno']."</td>";
+                echo "<td style='text-align: center;'>
+                    <input type='radio' name='selecionar' value='" . $registos['id_aluno'] . "' 
+                    onclick='document.getElementById(\"id_aluno_editar\").value=\"" . $registos['id_aluno'] . "\";
+                            document.getElementById(\"id_aluno_eliminar\").value=\"" . $registos['id_aluno'] . "\";
+                            document.getElementById(\"btn-editar\").disabled = false;
+                            document.getElementById(\"btn-eliminar\").disabled = false;'>
+                </td>";
                 echo "</tr>";
                 }
             echo "</tbody></table>";
