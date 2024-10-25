@@ -21,14 +21,7 @@ if ($_GET['id_aluno']) {
         $turma = $aluno['turma'];
         $ano = $aluno['ano'];
         $aluno_pw = $aluno['aluno_pw']; 
-    } else {
-        echo "Não foram encontrados dados para este aluno.";
     }
-} else {
-    echo "ID do aluno não foi especificado.";
-}
-if (!$resultado) {
-    echo "Erro na consulta: " . mysqli_error($ligaDB);
 }
 
 ?>
