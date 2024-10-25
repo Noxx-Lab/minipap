@@ -1,49 +1,137 @@
-/* Estilos para a tabela */
+body {
+    background-color: #000000; /* Fundo escuro */
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+a.voltar-btn {
+    color: white;
+    background-color: #1a1a3d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+a.voltar-btn:hover {
+    background-color: #333366;
+}
+
+/* Estilo para o botão de logout */
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #1a1a3d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #333366;
+}
+
+/* Estilo do contêiner de pesquisa */
+.box-search {
+    display: flex;
+    justify-content:center;
+    gap: 10px; /* Espaço entre os elementos */
+    margin-bottom: 20px;}
+
+.box-search input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333366;
+    width: 300px;
+    font-size: 16px;
+    background-color: #1a1a3d;
+    color: white;
+}
+
+.box-search button {
+    background-color: #333366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.box-search button:hover {
+    background-color:#b695b6;
+}
+
+/* Estilo para a tabela */
 table {
-    width: 60%;
-    margin: 20px auto; /* Centraliza a tabela na página */
+    width: 100%;
     border-collapse: collapse;
-    border: 2px solid #D8BFD8; /* Borda roxo claro */
+    margin-bottom: 20px;
+}
+
+thead th {
+    background-color: #1a1a3d;
+    padding: 10px;
+    color: white;
+    text-align: left;
+}
+
+tbody td {
+    background-color: #333366;
+    padding: 10px;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #292946;
 }
 
 th, td {
-    border: 2px solid #D8BFD8;
-    padding: 10px;
-    text-align: center;
+    border: 1px solid #444466;
 }
 
-th {
-    background-color: #D8BFD8; /* Fundo roxo claro */
-}
-div{
-    text-align: center; /* para centralizar a div que tem o número de páginas */
-}
-button {
-width: 80px; /* Aumenta a largura dos botões */
-height: 35px; /* Aumenta a altura dos botões */
-color: white;
-border: none;
-cursor: pointer;
+/* Estilo para os botões de adicionar, editar, eliminar */
+form {
+    display: inline-block;
+    margin-right: 15px;
+}   
+
+form button {
+    background-color: #333366;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-    /* Outros estilos mantidos */
-    button {
-        width: 80px;
-        height: 35px;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
+form button[name="adicionar"] {
+    background-color: green;
+}
 
-    /* Estilo para botões ativos */
-    button:enabled {
-        opacity: 1;
-    }
+form button#btn-editar {
+    background-color: blue;
+}
 
-    /* Estilo para botões desativados */
-    button:disabled {
-        background-color: #d3d3d3; /* Cor cinzenta clara para parecer desativado */
-        cursor: not-allowed;
-        opacity: 0.6; /* Transparência para reforçar que está desativado */
-        color: #666666; /* Texto cinza para destacar menos */
-    }
+form button#btn-eliminar {
+    background-color: red;
+}
+
+form button:hover {
+    background-color: #555588;
+}
+
+/* Posicionamento dos botões */
+form button {
+    position: relative;
+    float: right;
+}

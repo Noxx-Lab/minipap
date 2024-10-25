@@ -23,8 +23,7 @@ if (isset($_POST['id_aluno'])) {
         $aluno_pw = $aluno['aluno_pw']; 
     }
 }
-?>;
-
+?>
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
@@ -32,6 +31,7 @@ if (isset($_POST['id_aluno'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliminar Aluno</title>
     <link rel="stylesheet" href="eliminar_style.css">
+
 </head>
 <body>
     <a href="tabela.php" class="voltar-btn">Voltar</a>

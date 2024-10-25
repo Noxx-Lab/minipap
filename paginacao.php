@@ -1,5 +1,4 @@
 <?php
-
 // Parâmetros de paginação
 $limit = 10;  // Número de registos por página
 $offset = ($page - 1) * $limit;  // Calcular o deslocamento da tabela que vai aparecer sem isso os registos da tabela só se repetem(OFFSET)

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="tabela_style.css">
 </head>
 <body>
+<a href="logout.php" class="logout-btn">Logout</a>
+
 <form action="adicionar.html" method="post" style="display:inline;">
         <button type="submit" name="adicionar" style="background-color: green; color: white;">Adicionar</button>
     </form>

@@ -9,21 +9,24 @@ body {
     margin: 0;
 }
 
-.voltar-btn {
-    color: white;
+a.voltar-btn {
+    position: fixed; /* Fixar na posição */
+    top: 20px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
     background-color: #1a1a3d;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    display: inline-block;
-    margin: 20px;
     transition: background-color 0.3s;
     font-size: 16px;
+    z-index: 1000; /* Garantir que fique acima de outros elementos */
 }
 
-.voltar-btn:hover {
+a.voltar-btn:hover {
     background-color: #333366;
 }
+
 
 .confirm-container {
     background-color: #1a1a3d;
