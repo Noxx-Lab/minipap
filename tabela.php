@@ -10,7 +10,7 @@
 <form action="adicionar.html" method="post" style="display:inline;">
         <button type="submit" name="adicionar" style="background-color: green; color: white;">Adicionar</button>
     </form>
-    <form action="editar.php" method="post" style="display:inline;">
+    <form action="editar.php" method="get" style="display:inline;">
         <input type="hidden" name="id_aluno" id="id_aluno_editar">
         <button type="submit" id="btn-editar" style="background-color: blue; color: white;" disabled>Editar</button>
     </form>
